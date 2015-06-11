@@ -8,6 +8,8 @@ package monocholor;
 import com.flickr4java.flickr.Flickr;
 import com.flickr4java.flickr.REST;
 import com.flickr4java.flickr.test.TestInterface;
+import com.flickr4java.flickr.galleries.Gallery;
+import com.flickr4java.flickr.photos.PhotosInterface;
 import java.util.Collection;
 import java.util.Collections;
 import javafx.application.Application;
@@ -29,6 +31,9 @@ public class MonoCholor extends Application {
         Flickr f = new Flickr(apiKey, sharedSecret, new REST());
         TestInterface testInterface = f.getTestInterface();
         Collection results = testInterface.echo(Collections.EMPTY_MAP);
+        
+        PhotosInterface photosInterface = f.getPhotosInterface();
+        Collection photoCollection = photosInterface.getRecent(500,0);
         
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
