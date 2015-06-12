@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import java.lang.*?>
@@ -10,11 +11,16 @@
 
 <AnchorPane id="AnchorPane" prefHeight="768" prefWidth="1024" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monocholor.FXMLDocumentController">
    <children>
-      <ScrollPane layoutX="21.0" layoutY="20.0" prefHeight="710.0" prefWidth="669.0" vbarPolicy="ALWAYS">
+      <ScrollPane layoutX="21.0" layoutY="66.0" prefHeight="685.0" prefWidth="714.0" vbarPolicy="ALWAYS">
          <content>
-            <ImageView fx:id="prevPic" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleButtonAction" pickOnBounds="true" preserveRatio="true" />
+            <FlowPane fx:id="flowPane" prefHeight="635.0" prefWidth="647.0" />
          </content></ScrollPane>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="710.0" layoutX="707.0" layoutY="20.0" stroke="#797979" strokeType="INSIDE" width="303.0" />
-      <AnchorPane layoutX="707.0" layoutY="20.0" prefHeight="710.0" prefWidth="303.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="733.0" layoutX="749.0" layoutY="20.0" stroke="#797979" strokeType="INSIDE" width="261.0" />
+      <AnchorPane layoutX="749.0" layoutY="21.0" prefHeight="733.0" prefWidth="261.0" />
+      <Label layoutX="38.0" layoutY="21.0" prefHeight="35.0" prefWidth="519.0" text="Wählen sie ein Bild aus!">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

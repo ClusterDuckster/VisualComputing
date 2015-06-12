@@ -9,9 +9,16 @@ import com.flickr4java.flickr.Flickr;
 import com.flickr4java.flickr.REST;
 import com.flickr4java.flickr.test.TestInterface;
 import com.flickr4java.flickr.galleries.Gallery;
+import com.flickr4java.flickr.photos.Photo;
+import com.flickr4java.flickr.photos.PhotoList;
+import com.flickr4java.flickr.photos.PhotoSet;
 import com.flickr4java.flickr.photos.PhotosInterface;
+import com.flickr4java.flickr.photos.Size;
+import java.awt.image.BufferedImage;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,14 +33,7 @@ public class MonoCholor extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        String apiKey = "ec7e3362915164ccab3a61299422bd7b";
-        String sharedSecret = "07b05df1b1c75797";
-        Flickr f = new Flickr(apiKey, sharedSecret, new REST());
-        TestInterface testInterface = f.getTestInterface();
-        Collection results = testInterface.echo(Collections.EMPTY_MAP);
         
-        PhotosInterface photosInterface = f.getPhotosInterface();
-        Collection photoCollection = photosInterface.getRecent(500,0);
         
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
