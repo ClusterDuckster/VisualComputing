@@ -11,13 +11,24 @@
 
 <AnchorPane id="AnchorPane" prefHeight="768" prefWidth="1024" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monocholor.FXMLDocumentController">
    <children>
+      <ImageView fitHeight="768.0" fitWidth="1032.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
       <ScrollPane layoutX="21.0" layoutY="66.0" prefHeight="685.0" prefWidth="714.0" vbarPolicy="ALWAYS">
          <content>
             <FlowPane fx:id="flowPane" prefHeight="635.0" prefWidth="647.0" />
          </content></ScrollPane>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="733.0" layoutX="749.0" layoutY="20.0" stroke="#797979" strokeType="INSIDE" width="261.0" />
-      <AnchorPane layoutX="749.0" layoutY="21.0" prefHeight="733.0" prefWidth="261.0" />
-      <Label layoutX="38.0" layoutY="21.0" prefHeight="35.0" prefWidth="519.0" text="Wählen sie ein Bild aus!">
+      <AnchorPane layoutX="749.0" layoutY="21.0" prefHeight="733.0" prefWidth="261.0">
+         <children>
+            <Button layoutX="50.0" layoutY="655.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" text="Bild laden" />
+            <TextField layoutX="14.0" layoutY="59.0" prefHeight="31.0" prefWidth="236.0" promptText="Suchbegriff" />
+            <Button layoutX="50.0" layoutY="108.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" text="Suchen" />
+            <Button layoutX="50.0" layoutY="175.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" text="Aktualisieren" />
+         </children></AnchorPane>
+      <Label layoutX="38.0" layoutY="21.0" prefHeight="35.0" prefWidth="519.0" text="Wählen sie ein Bild aus!" textFill="#d0d0d0">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>

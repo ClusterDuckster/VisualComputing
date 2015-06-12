@@ -24,11 +24,13 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.VBox;
 
 
 /**
@@ -64,15 +66,20 @@ public class FXMLDocumentController implements Initializable {
         Collection results = testInterface.echo(Collections.EMPTY_MAP);
         
         PhotosInterface iface = f.getPhotosInterface();
-        PhotoList photos = iface.getRecent(null,20,0);
+        PhotoList photos = iface.getRecent(null,10,0);
         
         for(int i=0; i<photos.size(); i++){
+            
+            VBox vb = new VBox();
+            vb.setPadding(new Insets(20, 30, 20, 30));
+            
             Image tempImg = SwingFXUtils.toFXImage(iface.getImage((Photo) photos.get(i), Size.SMALL),null);
             ImageView imgView = new ImageView(tempImg);
             imgView.setId("imgView"+i);
             imgView.setStyle("-fx-margin: 50px; ");
             
-            flowPane.getChildren().add(imgView);
+            vb.getChildren().add(imgView);
+            flowPane.getChildren().add(vb);
         }
         
         
