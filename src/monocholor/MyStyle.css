@@ -12,3 +12,15 @@ and open the template in the editor.
     margin: 50px
     
 }
+
+#pickPhoto{
+    -fx-text-fill: whitesmoke;
+}
+
+.button{
+    -fx-font: 20px "Sans-Serif";
+    -fx-text-fill: rgb(49, 89, 23);
+    -fx-border-color: rgb(49, 89, 23);
+    -fx-border-radius: 5;
+    -fx-padding: 3 6 6 6;
+}

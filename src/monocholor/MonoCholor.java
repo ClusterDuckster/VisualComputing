@@ -34,10 +34,12 @@ public class MonoCholor extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
+        stage.setTitle("MonoColor");
         
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
+        scene.getStylesheets().add("MyStyle.css");
         
         stage.setScene(scene);
         stage.show();
