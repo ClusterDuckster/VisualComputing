@@ -23,12 +23,12 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edededcc" height="733.0" layoutX="749.0" layoutY="20.0" stroke="#797979" strokeType="INSIDE" width="261.0" />
       <AnchorPane layoutX="749.0" layoutY="20.0" prefHeight="733.0" prefWidth="261.0">
          <children>
-            <Button fx:id="loadBtn" layoutX="50.0" layoutY="655.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" text="Bild laden" />
-            <TextField layoutX="14.0" layoutY="59.0" prefHeight="31.0" prefWidth="236.0" promptText="Suchbegriff" />
-            <Button fx:id="searchBtn" layoutX="50.0" layoutY="108.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" text="Suchen" />
-            <Button fx:id="aktBtn" layoutX="50.0" layoutY="175.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="165.0" text="Aktualisieren" />
+            <Button fx:id="loadBtn" layoutX="50.0" layoutY="655.0" mnemonicParsing="false" onAction="#handleLoadBtn" prefHeight="55.0" prefWidth="165.0" text="Bild laden" />
+            <TextField fx:id="searchField" layoutX="14.0" layoutY="59.0" prefHeight="31.0" prefWidth="236.0" promptText="Suchbegriff" />
+            <Button fx:id="searchBtn" layoutX="50.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleSearchBtn" prefHeight="55.0" prefWidth="165.0" text="Suchen" />
+            <Button fx:id="aktBtn" layoutX="50.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="55.0" prefWidth="165.0" text="Aktualisieren" />
          </children></AnchorPane>
-      <Label fx:id="pickPhoto" layoutX="38.0" layoutY="21.0" prefHeight="35.0" prefWidth="519.0" text="Wählen sie ein Bild aus!" textFill="#d0d0d0">
+      <Label fx:id="pickPhoto" layoutX="38.0" layoutY="21.0" prefHeight="35.0" prefWidth="519.0" text="Wählen Sie ein Bild aus" textFill="#d0d0d0">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
